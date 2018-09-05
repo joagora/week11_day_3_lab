@@ -70,6 +70,18 @@ describe('Cinema', function () {
     assert.deepStrictEqual(actual, 622);
   });
 
+  it('Cinema should be able to filter films by year', function () {
+    const actual = cinema.filmsByProperty("year", 2016);
+    assert.deepStrictEqual(actual, [moonlight]);
+  })
+
+  it('Cinema should be able to filter films by title', function () {
+    const actual = cinema.filmsByProperty("title", "Moonlight");
+    assert.deepStrictEqual(actual, [moonlight]);
+  })
+
+
 });
+
 
 module.exports = Cinema;

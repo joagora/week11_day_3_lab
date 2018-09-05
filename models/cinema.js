@@ -42,4 +42,11 @@ Cinema.prototype.calculateDuration = function () {
   }, 0);
   return result;
 }
+
+Cinema.prototype.filmsByProperty = function (propertyName, value) {
+  const result = this.films.filter(function (film) {
+    return film[propertyName] === value;
+  })
+  return result;
+}
 module.exports = Cinema;
