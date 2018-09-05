@@ -35,4 +35,11 @@ Cinema.prototype.checkLengthOver = function (duration) {
   })
   return result;
 }
+
+Cinema.prototype.calculateDuration = function () {
+  const result = this.films.reduce(function (total, film) {
+    return total + film.length;
+  }, 0);
+  return result;
+}
 module.exports = Cinema;
