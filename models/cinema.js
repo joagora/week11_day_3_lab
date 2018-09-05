@@ -29,4 +29,10 @@ Cinema.prototype.checkIfHasFilmByYear = function (year) {
   return result;
 }
 
+Cinema.prototype.checkLengthOver = function (duration) {
+  const result = this.films.every(function (film) {
+    return film.length > duration;
+  })
+  return result;
+}
 module.exports = Cinema;
